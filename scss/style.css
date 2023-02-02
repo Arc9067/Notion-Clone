@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+:root {
+  --font: "Inter", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --black: #000;
+  --white: #fff;
+  --grey: #cecdce;
+  --lightbg: #e0f4ff;
+  --primary: #1d256b;
+  --borderRadius: 20px;
+  --max-width: 1200px;
+  --purple: #bd73e8;
+  --purpled: #9d34da;
+  --lblack: #1a1a1a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--black);
+  line-height: 1.5;
+  display: grid;
+  place-items: center;
+  color: var(--grey);
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2,
+h3,
+h4 {
+  font-size: 30px;
+}
+
+button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  background-color: var(--purpled);
+  color: var(--white);
+}
+
+p,
+a,
+button,
+li {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  h2,
+h3,
+h4 {
+    font-size: 21px;
+  }
+  p,
+a,
+button,
+li {
+    font-size: 16px;
+  }
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#general {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+#general #in-general {
+  min-height: 100vh;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
+}
+#general #in-general #home {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#general #in-general #home h1 {
+  text-transform: capitalize;
+  font-size: 40px;
+  color: var(--white);
+  font-weight: 700;
+}
+#general #in-general #home h1:after {
+  font-family: fontawesome;
+  content: "\f544";
+  color: var(--purple);
+  text-transform: capitalize;
+  font-size: 30px;
+  position: absolute;
+}
+#general #in-general #home p {
+  max-width: 45rem;
+  color: var(--white);
+  font-weight: 500;
+  pointer-events: none;
+}
+#general #in-general #home .home-btn {
+  margin-top: 3rem;
+}
+#general #in-general #home .home-btn button {
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
+}
+#general #in-general #home img {
+  width: 80%;
+}
+#general #in-general #banner {
+  margin-top: 3rem;
+}
+#general #in-general #banner h2 {
+  max-width: 45rem;
+  font-weight: 700;
+  color: var(--white);
+  font-size: 23px;
+}
+#general #in-general #banner .video-div {
+  position: relative;
+  width: 100%;
+  background-color: var(--lblack);
+  height: auto;
+  margin-top: 3rem;
+  border-radius: 5px;
+  padding: 2rem 2rem 0 2rem;
+}
+#general #in-general #banner .video-div .person {
+  position: absolute;
+  top: -160px;
+  right: 0;
+  width: 20%;
+  opacity: 0;
+}
+#general #in-general #banner .video-div .video-txt {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--white);
+}
+#general #in-general #banner .video-div .video-txt i {
+  font-size: 28px;
+  color: var(--purpled);
+}
+#general #in-general #banner .video-div .video-txt h4 {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+#general #in-general #banner .video-div .video-txt p {
+  text-transform: capitalize;
+  color: var(--grey);
+}
+#general #in-general #banner .video-div video {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid rgba(206, 205, 206, 0.3137254902);
+  border-bottom: 0;
+}
+#general #in-general #generate {
+  width: 100%;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+#general #in-general #generate .in-generate h4 {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 25px;
+}
+#general #in-general #generate .in-generate .generate-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+  row-gap: 4rem;
+}
+#general #in-general #generate .in-generate .generate-card .gcard {
+  width: 90%;
+  width: 300px;
+  margin: 0 auto;
+  background-color: var(--lblack);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+}
+#general #in-general #generate .in-generate .generate-card .gcard i {
+  font-size: 25px;
+  color: var(--purple);
+}
+#general #in-general #generate .in-generate .generate-card .gcard h5 {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: var(--white);
+  font-size: 22px;
+}
+#general #in-general #generate .in-generate .generate-card .gcard p {
+  font-size: 16px;
+}
+#general #in-general #think {
+  width: 100%;
+  padding-bottom: 4rem;
+}
+#general #in-general #think .in-think h2 {
+  font-size: 22px;
+  max-width: 90%;
+  font-weight: 700;
+  color: white;
+}
+#general #in-general #think .in-think .vp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#general #in-general #think .in-think .vp .video-div {
+  position: relative;
+  background-color: var(--lblack);
+  height: auto;
+  margin-top: 3rem;
+  max-width: 80%;
+  border-radius: 5px;
+  padding: 2rem 2rem 0 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+#general #in-general #think .in-think .vp .video-div .video-txt {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--white);
+}
+#general #in-general #think .in-think .vp .video-div .video-txt i {
+  font-size: 28px;
+  color: var(--purpled);
+}
+#general #in-general #think .in-think .vp .video-div .video-txt h4 {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+#general #in-general #think .in-think .vp .video-div .video-txt p {
+  text-transform: capitalize;
+  color: var(--grey);
+  font-size: 18px;
+}
+#general #in-general #think .in-think .vp .video-div video {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid rgba(206, 205, 206, 0.3137254902);
+  border-bottom: 0;
+}
+#general #in-general #think .in-think .vp .videod {
+  width: 80%;
+  background-color: var(--lblack);
+  margin-top: 4rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  row-gap: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+#general #in-general #think .in-think .vp .videod .video-txt {
+  color: var(--white);
+}
+#general #in-general #think .in-think .vp .videod .video-txt i {
+  font-size: 3rem;
+  color: var(--purpled);
+}
+#general #in-general #think .in-think .vp .videod .video-txt h5 {
+  text-transform: capitalize;
+  font-size: 20px;
+}
+#general #in-general #think .in-think .vp .videod .video-txt p {
+  font-size: 14px;
+}
+#general #in-general #sec5 {
+  width: 100%;
+  padding-bottom: 4rem;
+}
+#general #in-general #sec5 .in-sec5 h2 {
+  font-weight: 700;
+  font-size: 23px;
+  color: var(--white);
+}
+#general #in-general #sec5 .in-sec5 .fsecacrd {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+#general #in-general #sec5 .in-sec5 .fsecacrd .card {
+  gap: 2rem;
+  width: 320px;
+  background-color: var(--lblack);
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+#general #in-general #sec5 .in-sec5 .fsecacrd .card i {
+  font-size: 3rem;
+  color: var(--purple);
+}
+#general #in-general #sec5 .in-sec5 .fsecacrd .card h3 {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: var(--white);
+}
+#general #in-general #sec5 .in-sec5 .fsecacrd .card p {
+  font-size: 15px;
+  color: var(--white);
+  font-weight: 400;
+}
+#general #in-general #sec6 {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-bottom: 6rem;
+  border-top: 0.3px solid rgba(206, 205, 206, 0.368627451);
+  padding-top: 3rem;
+}
+#general #in-general #sec6 .in-sec6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+#general #in-general #sec6 .in-sec6 img {
+  width: 25rem;
+}
+#general #in-general #sec6 .in-sec6 h3 {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 35px;
+  max-width: 45rem;
+}
+#general #in-general #sec6 .in-sec6 p {
+  max-width: 45rem;
+  font-weight: 500;
+}
+#general #in-general #sec6 .in-sec6 .btn {
+  background-color: var(--purpled);
+  color: white;
+  text-transform: inherit;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 800px) {
+  #general {
+    max-width: var(--max-width);
+  }
+  #general #in-general #home h1 {
+    font-size: 70px;
+  }
+  #general #in-general #banner h2 {
+    font-size: 37px;
+  }
+  #general #in-general #banner .video-div .person {
+    opacity: 1;
+  }
+  #general #generate .in-generate .generate-card {
+    justify-content: space-between;
+  }
+  #general #think .in-think h2 {
+    font-size: 32px !important;
+    max-width: 55rem !important;
+  }
+  #general #think .in-think .vp {
+    flex-direction: row !important;
+  }
+  #general #think .in-think .vp .video-div {
+    max-width: 100% !important;
+  }
+  #general #think .in-think .vp .videod {
+    width: 45% !important;
+  }
+  #sec5 .in-sec5 h2 {
+    font-size: 35px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
